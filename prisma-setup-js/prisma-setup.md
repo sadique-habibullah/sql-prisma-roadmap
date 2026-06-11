@@ -32,13 +32,13 @@ prisma.config.ts -> prisma.config.js
 ```
 ### 4.1. And do the following in the same file (`prisma.config.js`):
 Replace 
-```
+```js
 datasource: {
     url: process.env["DATABASE_URL"],
   }
 ```
 with
-```
+```js
 datasource: {
     url: process.env["DIRECT_URL"],
   }
