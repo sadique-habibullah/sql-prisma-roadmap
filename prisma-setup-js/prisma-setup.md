@@ -65,7 +65,13 @@ model Post {
 npx prisma migrate dev --name init
 ```
 
-## 8. Instantiate Prisma Client in `lib/prisma.js`
+## 8. Run the generation
+
+```js
+npx prisma generate
+```
+
+## 9. Instantiate Prisma Client in `lib/prisma.js`
 
 ```js
 import "dotenv/config";
@@ -80,7 +86,7 @@ const prisma = new PrismaClient({ adapter });
 export { prisma };
 ```
 
-## 9. Write your query in `query.js`
+## 10. Write your query in `query.js`
 
 ```js
 import { prisma } from "./lib/prisma.js"; // the .js is mandatory since we are using ESM
@@ -125,7 +131,7 @@ main()
   });
 ```
 
-## 10. Run `node query.js`
+## 11. Run `node query.js`
 
 References:
 
