@@ -30,7 +30,8 @@ npx prisma init --datasource-provider postgresql --generator-provider prisma-cli
 ```
 prisma.config.ts -> prisma.config.js
 ```
-And replace 
+### 4.1. And do the following:
+Replace 
 ```
 datasource: {
     url: process.env["DATABASE_URL"],
