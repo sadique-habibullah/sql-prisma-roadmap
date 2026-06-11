@@ -35,8 +35,11 @@ prisma.config.ts -> prisma.config.js
 
 ```js
 // .env
-DATABASE_URL =
-  "postgresql://username:password@localhost:5432/mydb?schema=public";
+# Connect to Postgres via the shared transaction-mode pooler (IPv4-only)
+DATABASE_URL="postgresql://postgres.username:[YOUR-PASSWORD]@supabase.com:6543/postgres?pgbouncer=true"
+
+# Connect to Postgres via the shared session-mode pooler (used for migrations)
+DIRECT_URL="postgresql://postgres.username:[YOUR-PASSWORD]@supabase.com:5432/postgres"
 ```
 
 ## 6. Add models to `prisma/schema.prisma`
