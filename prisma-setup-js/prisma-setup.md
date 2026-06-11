@@ -30,6 +30,18 @@ npx prisma init --datasource-provider postgresql --generator-provider prisma-cli
 ```
 prisma.config.ts -> prisma.config.js
 ```
+And replace 
+```
+datasource: {
+    url: process.env["DATABASE_URL"],
+  }
+```
+with
+```
+datasource: {
+    url: process.env["DIRECT_URL"],
+  }
+```
 
 ## 5. Update your `.env` file with your PostgreSQL connection string
 
