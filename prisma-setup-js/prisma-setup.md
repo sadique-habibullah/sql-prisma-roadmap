@@ -30,7 +30,7 @@ npx prisma init --datasource-provider postgresql --generator-provider prisma-cli
 ```
 prisma.config.ts -> prisma.config.js
 ```
-### 4.1. And do the following in the same file:
+### 4.1. And do the following in the same file (`prisma.config.js`):
 Replace 
 ```
 datasource: {
